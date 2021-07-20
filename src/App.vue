@@ -1,32 +1,43 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <tabber>
+      <tabber-item>
+        <img slot="tabber-icon" src="./assets/img/tabber/shouye1@2x.png" alt="">
+        <img slot="tabber-icon-active" src="./assets/img/tabber/shouye@2x.png" alt="">
+        <div slot="tabber-text">首页</div>
+      </tabber-item>
+      <tabber-item>
+        <img slot="tabber-icon" src="./assets/img/tabber/shouye1@2x.png" alt="">
+        <img slot="tabber-icon-active" src="./assets/img/tabber/shouye@2x.png" alt="">
+        <div slot="tabber-text">首页</div>
+      </tabber-item>
+      <tabber-item>
+        <img slot="tabber-icon" src="./assets/img/tabber/shouye1@2x.png" alt="">
+        <img slot="tabber-icon-active" src="./assets/img/tabber/shouye@2x.png" alt="">
+        <div slot="tabber-text">首页</div>
+      </tabber-item>
+      <tabber-item>
+        <img slot="tabber-icon" src="./assets/img/tabber/shouye1@2x.png" alt="">
+        <img slot="tabber-icon-active" src="./assets/img/tabber/shouye@2x.png" alt="">
+        <div slot="tabber-text">首页</div>
+      </tabber-item>
+    </tabber>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
 
-#nav {
-  padding: 30px;
+import Tabber from './components/common/tabber/Tabber'
+import TabberItem from './components/common/tabber/Tabberitem'
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+export default {
+  name: 'App',
+  components:{
+    Tabber,
+    TabberItem
   }
 }
+</script>
+
+<style>
 </style>
